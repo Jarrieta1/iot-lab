@@ -41,7 +41,7 @@ app.post("/visualize", async (req, res) => {
     console.log("📥 Datos recibidos del estudiante:", datosRecibidos);
 
     const respuestaProfesor = await fetch(
-      "https://iot-lab-production.up.railway.app/data,
+      "https://iot-lab-production.up.railway.app/data",
       {
         method: "POST",
         headers: {
