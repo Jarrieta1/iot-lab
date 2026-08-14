@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 app.get("/data", async (req, res) => {
   try {
     const respuesta = await fetch(
-      "https://callback-iot-service-production.up.railway.app/data",
+      "https://iot-lab-production.up.railway.app/data",
     );
     const datos = await respuesta.json();
     const ultimosDos = Array.isArray(datos) ? datos.slice(-2) : [];
@@ -41,7 +41,7 @@ app.post("/visualize", async (req, res) => {
     console.log("📥 Datos recibidos del estudiante:", datosRecibidos);
 
     const respuestaProfesor = await fetch(
-      "https://callback-iot-service-production.up.railway.app/data",
+      "https://iot-lab-production.up.railway.app/data,
       {
         method: "POST",
         headers: {
