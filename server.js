@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.post("/data", async (req, res) => {
+app.get("/data", async (req, res) => {
   try {
     const respuesta = await fetch(
       "https://iot-lab-production.up.railway.app/data",
